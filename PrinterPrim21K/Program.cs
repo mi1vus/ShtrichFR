@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using DrvFRLibMy;
+using DrvFRLib;
 using ShtrihFR;
 using CachType = System.Collections.Generic.Dictionary<System.UInt32, ShtrihFR.TLVReader.ТЛВОтчет>;
 
@@ -100,9 +100,11 @@ namespace PrinterPayonline
             }
             var driver = new DrvFR();
 
+            //PrintBar(msg);
+
             PrintStatus(driver);
             var tlvReader = new TLVReader(driver);
-            var doc = tlvReader.ReadTLVDoc(796/*GetLastDocNumber(driver)*/);
+            //var doc = tlvReader.ReadTLVDoc(796/*GetLastDocNumber(driver)*/);
 
             if (GetStatus(driver) == StateType.ЗакрытаяСмена)
             {
@@ -180,7 +182,7 @@ namespace PrinterPayonline
 
                 //for (int i = 666; i < 667; ++i)
                 //{
-                doc = tlvReader.ReadTLVDoc(GetLastDocNumber(driver));
+                //doc = tlvReader.ReadTLVDoc(GetLastDocNumber(driver));
                 //}
 
                 TestMode(driver, IsTest);

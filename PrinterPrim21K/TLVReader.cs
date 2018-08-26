@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using DrvFRLibMy;
+using DrvFRLib;
 using CachType = System.Collections.Generic.Dictionary<System.UInt32, ShtrihFR.TLVReader.ТЛВОтчет>;
 
 namespace ShtrihFR
